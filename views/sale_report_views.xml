@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="pronto_sale_report_order_tree">
+        <field name="model">pronto.sale.report.order</field>
+        <field eval="10" name="priority"/>
+        <field name="arch" type="xml">
+            <tree string="Pedidos" create="0" delete="0">
+                <field name="partner_id"/>
+                <field name="date_order" widget='date'/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="pronto_sale_report_order_search" model="ir.ui.view">
+        <field name="model">pronto.sale.report.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id"/>
+                <separator/>
+                <filter string="Presupuestos" name="presupuestos" domain="[('state','in',('draft', 'sent'))]"/>
+                <filter string="Pedidos" name="pedidos" domain="[('state','in',('sale', 'done'))]"/>
+                <separator/>
+                <filter name="group_partner" string="Por cliente" context="{'group_by': 'partner_id'}"/>
+                <filter name="group_date_order" string="Por fecha pedido" context="{'group_by': 'date_order'}"/>
+            </search>
+        </field>
+    </record>
+
+    <act_window id="pronto_report.action_sale_report_order"  
+                name="Reporte de pedidos"
+                res_model="pronto.sale.report.order" 
+                view_mode="tree"
+                target="current"/>
+    
+
+
+</odoo>

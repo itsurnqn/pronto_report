@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Ventas -->
+
+    <menuitem id="menu_sale_report" 
+            name="Reportes"
+            parent="sale.menu_sale_report"
+            sequence="10" />
+
+    <menuitem id="menu_sale_report_order" 
+            parent="pronto_report.menu_sale_report"
+            sequence="10"
+            action="pronto_report.action_sale_report_order" />
+
+<!-- Compras -->
+
+    <!--
+    <menuitem id="purchase_report"
+            name="Reportes"
+            parent="purchase.purchase_report"
+            sequence="10" />
+
+    <menuitem id="menu_purchase_report_order" 
+            parent="pronto_report.purchase_report"
+            sequence="10"
+            action="pronto_report.action_sale_report_order" />
+    -->
+
+<!-- Inventario -->
+
+<!--     <menuitem id="menu_warehouse_report"
+            name="Reportes"
+            parent="stock.menu_warehouse_report"
+            sequence="1000" />
+
+    <menuitem id="menu_warehouse_report_order" 
+            parent="pronto_report.menu_warehouse_report"
+            sequence="10"
+            action="pronto_report.action_sale_report_order" /> -->
+
+<!-- Contabilidad -->
+
+<!--     <menuitem id="menu_finance_reports"
+            name="Reportes"
+            parent="account.menu_finance_reports"
+            sequence="1000" />
+
+    <menuitem id="menu_finance_reports_order" 
+            parent="pronto_report.menu_finance_reports"
+            sequence="10"
+            action="pronto_report.action_sale_report_order" /> -->
+
+<!-- CRM -->
+<!--     <menuitem id="crm_menu_report"
+            name="Reportes"
+            parent="crm.crm_menu_report"
+            sequence="1000" />
+
+    <menuitem id="crm_menu_report_order" 
+            parent="pronto_report.crm_menu_report"
+            sequence="10"
+            action="pronto_report.action_sale_report_order" /> -->
+
+<!-- CAJA -->
+
+<!--     <menuitem id="menu_box_informes"
+            name="Informes"
+            parent="box.menu_box_root"
+            sequence="1000" />
+
+    <menuitem id="menu_box_informes_reportes"
+            name="Reportes"
+            parent="pronto_report.menu_box_informes"
+            sequence="1000" />
+
+    <menuitem id="menu_box_informes_reportes_order" 
+            parent="pronto_report.menu_box_informes_reportes"
+            sequence="10"
+            action="pronto_report.action_sale_report_order" /> -->
+
+
+
+<!-- menu_box_root -->
+
+</odoo>
