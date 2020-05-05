@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="pronto_account_report_cobros_tarjeta_tree">
+        <field name="model">pronto.account.report.cobros.tarjeta</field>
+        <field eval="10" name="priority"/>
+        <field name="arch" type="xml">
+            <tree create="0" delete="0">
+                <field name="date" widget='date'/>
+                <field name="move_id"/>
+                <field name="journal_id"/>
+                <field name="etiqueta"/>
+                <field name="cuenta_contable"/>
+                <field name="partner_id"/>
+                <field name="full_reconcile_id"/>                
+                <field name="debit"/>
+                <field name="plan_tarjeta_id"/>  
+                <field name="nro_lote"/>
+                <field name="nro_cupon"/>                
+            </tree>
+        </field>
+    </record>
+
+    <record id="pronto_account_report_cobros_tarjeta__search" model="ir.ui.view">
+        <field name="model">pronto.account.report.cobros.tarjeta</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id"/>
+                <separator/>
+                <filter string="No conciliado" domain="[('full_reconcile_id', '=', False), ('balance','!=', 0), ('reconcile','=',True)]" name="no_conciliado"/>
+            </search>
+        </field>
+    </record>
+
+    <act_window id="pronto_report.action_account_report_cobros_tarjeta"  
+                name="Cobros tarjetas"
+                res_model="pronto.account.report.cobros.tarjeta" 
+                view_mode="tree"
+                target="current"
+                context="{'search_default_no_conciliado':1}"/>
+    
+
+
+</odoo>

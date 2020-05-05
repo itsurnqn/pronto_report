@@ -20,12 +20,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','account_payment_credit_card_mgmt'],
 
     # always loaded
     'data': [
-        'views/menu_views.xml',        
         'views/sale_report_views.xml',
+        'views/account_report_views.xml',
+        'views/menu_views.xml',
         'security/ir.model.access.csv',        
     ],
 

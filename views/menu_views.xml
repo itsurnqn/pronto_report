@@ -41,7 +41,7 @@
 
 <!-- Contabilidad -->
 
-<!--     <menuitem id="menu_finance_reports"
+    <menuitem id="menu_finance_reports"
             name="Reportes"
             parent="account.menu_finance_reports"
             sequence="1000" />
@@ -49,7 +49,7 @@
     <menuitem id="menu_finance_reports_order" 
             parent="pronto_report.menu_finance_reports"
             sequence="10"
-            action="pronto_report.action_sale_report_order" /> -->
+            action="pronto_report.action_account_report_cobros_tarjeta" />
 
 <!-- CRM -->
 <!--     <menuitem id="crm_menu_report"

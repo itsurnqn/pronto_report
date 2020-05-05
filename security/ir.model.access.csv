@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_pronto_sale_report_order,access_pronto_sale_report_order,model_pronto_sale_report_order,base.group_user,1,0,0,0
+access_pronto_account_report_cobros_tarjeta,access_pronto_account_report_cobros_tarjeta,model_pronto_account_report_cobros_tarjeta,base.group_user,1,0,0,0
